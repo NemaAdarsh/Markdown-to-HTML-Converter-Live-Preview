@@ -1,0 +1,46 @@
+# Requirements
+
+## Python Version
+- Python 3.6 or higher
+
+## Standard Library Modules
+The application uses only Python standard library modules, no external dependencies required:
+
+- tkinter (GUI framework)
+- os (Operating system interface)
+- re (Regular expressions)
+- webbrowser (Browser control)
+- html (HTML utilities)
+- tempfile (Temporary file handling)
+- datetime (Date and time utilities)
+
+## System Requirements
+- Windows, macOS, or Linux operating system
+- Default web browser for preview functionality
+- Minimum 50MB free disk space
+- 256MB RAM (recommended)
+
+## Verification Script
+To verify your system meets all requirements, run this Python script:
+
+```python
+import sys
+print(f"Python version: {sys.version}")
+
+required_modules = ['tkinter', 'os', 're', 'webbrowser', 'html', 'tempfile', 'datetime']
+missing_modules = []
+
+for module in required_modules:
+    try:
+        __import__(module)
+        print(f"✓ {module} - Available")
+    except ImportError:
+        print(f"✗ {module} - Missing")
+        missing_modules.append(module)
+
+if not missing_modules:
+    print("\n✓ All requirements satisfied! You can run the application.")
+else:
+    print(f"\n✗ Missing modules: {', '.join(missing_modules)}")
+    print("Please install Python with standard library support.")
+```
