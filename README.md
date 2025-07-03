@@ -62,7 +62,7 @@ The application uses only Python standard library modules:
 
 ### Method 2: Clone Repository
 ```bash
-git clone [repository-url]
+git clone https://github.com/NemaAdarsh/Markdown-to-HTML-Converter-Live-Preview.git
 cd "Markdown to HTML Converter (Live Preview)"
 ```
 
